@@ -1549,7 +1549,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
         // #TRANS: 'on' musical 'beat' 'do' some action
         newblock.staticLabels.push(_('on weak beat'), _('beat'), _('do'));
     }
-    newblock.oneArgBlock();
+    newblock.twoArgBlock();
     newblock.defaults.push(_('action'));
     newblock.adjustWidthToLabel();
     newblock.dockTypes[1] = 'textin';
@@ -2986,7 +2986,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
     var newblock = new ProtoBlock('floortom');
     newblock.palette = palettes.dict['drum'];
     blocks.protoBlockDict['floortom'] = newblock;
-    newblock.staticLabels.push(_('floor tom tom'));
+    newblock.staticLabels.push(_('floor tom'));
     newblock.adjustWidthToLabel();
     newblock.oneArgBlock();
     if (beginnerMode && !beginnerBlock('floortom')) {
@@ -3118,7 +3118,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
     }
     newblock.adjustWidthToLabel();
     newblock.twoArgBlock();
-    newblock.defaults.push(0);
+    newblock.defaults.push(100);
     newblock.defaults.push(0);
     newblock.dockTypes[1] = 'numberin';
     if (beginnerMode && !beginnerBlock('scrollxy')) {
@@ -4403,7 +4403,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
         newblock.staticLabels.push(_('right2'));
     } else {
         //.TRANS: right side of the screen
-        newblock.staticLabels.push(_('right'));
+        newblock.staticLabels.push(_('right (screen)'));
     }
     newblock.adjustWidthToLabel();
     newblock.parameterBlock();
@@ -4419,7 +4419,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
         newblock.staticLabels.push(_('left2'));
     } else {
         //.TRANS: left side of the screen
-        newblock.staticLabels.push(_('left'));
+        newblock.staticLabels.push(_('left (screen)'));
     }
     newblock.adjustWidthToLabel();
     newblock.parameterBlock();
@@ -4430,7 +4430,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
     var newblock = new ProtoBlock('toppos');
     newblock.palette = palettes.dict['media'];
     blocks.protoBlockDict['toppos'] = newblock;
-    newblock.staticLabels.push(_('top'));
+    newblock.staticLabels.push(_('top (screen)'));
     newblock.adjustWidthToLabel();
     newblock.parameterBlock();
     if (beginnerMode && !beginnerBlock('toppos')) {
@@ -4440,7 +4440,7 @@ function initBasicProtoBlocks(palettes, blocks, beginnerMode) {
     var newblock = new ProtoBlock('bottompos');
     newblock.palette = palettes.dict['media'];
     blocks.protoBlockDict['bottompos'] = newblock;
-    newblock.staticLabels.push(_('bottom'));
+    newblock.staticLabels.push(_('bottom (screen)'));
     newblock.adjustWidthToLabel();
     newblock.parameterBlock();
     if (beginnerMode && !beginnerBlock('bottompos')) {
